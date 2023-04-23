@@ -1,0 +1,18 @@
+.link_account {
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: #F9F9F9;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.link_account:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

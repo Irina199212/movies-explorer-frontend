@@ -1,0 +1,12 @@
+.form__elements {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 152px;
+}
+
+@media screen and (max-width:767px) {
+  .form__elements {
+    margin-bottom: 240px;
+  }
+
+}

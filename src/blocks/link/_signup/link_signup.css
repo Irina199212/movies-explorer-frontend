@@ -1,0 +1,14 @@
+.link_signup {
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.link_signup:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,19 @@
+.search__input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: #F9F9F9;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A0A0A0;
+}
+
+.search__input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}

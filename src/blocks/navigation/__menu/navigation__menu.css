@@ -1,0 +1,14 @@
+.navigation__menu {
+  display: flex;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 30px;
+  list-style-type: none;
+}
+
+@media screen and (max-width:767px) {
+  .navigation__menu {
+    gap: 6px;
+    margin-bottom: 17px;
+  }
+}

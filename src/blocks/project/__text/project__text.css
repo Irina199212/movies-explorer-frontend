@@ -1,0 +1,23 @@
+.project__text {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+@media screen and (max-width:1279px) {
+  .project__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .project__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

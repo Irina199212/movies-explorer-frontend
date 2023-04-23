@@ -1,0 +1,15 @@
+.form {
+  width: 396px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media screen and (max-width:767px) {
+  .form {
+    width: 260px;
+    align-items: center;
+  }
+
+}

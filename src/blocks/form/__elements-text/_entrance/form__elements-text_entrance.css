@@ -1,0 +1,6 @@
+.form__elements-text_entrance {
+  display: flex;
+  max-width: 285px;
+  margin: 0 auto;
+  gap: 6px;
+}

@@ -1,0 +1,30 @@
+.project__black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 228px;
+  height: 36px;
+  background-color: #000000;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:1279px) {
+  .project__black {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .project__black {
+    width: 100px;
+    height: 35px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

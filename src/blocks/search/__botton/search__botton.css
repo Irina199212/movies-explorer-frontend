@@ -1,0 +1,21 @@
+.search__botton {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: none;
+  background-image: url(../../../images/inputbutton.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.search__botton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1279px) {
+  .search__botton {
+    margin-right: 19px;
+  }
+}

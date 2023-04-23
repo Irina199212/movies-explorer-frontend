@@ -1,0 +1,26 @@
+.student__text {
+  margin: 0 0 99px 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  mix-blend-mode: normal;
+}
+
+@media screen and (max-width:1279px) {
+  .student__text {
+    margin: 0 0 87px 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .student__text {
+    margin: 0 0 40px 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,15 @@
+.student__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 66px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width:767px) {
+  .student__info {
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+  }
+}

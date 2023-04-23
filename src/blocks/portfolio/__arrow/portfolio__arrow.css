@@ -1,0 +1,29 @@
+.portfolio__arrow {
+  width: 29px;
+  height: 60px;
+  border: none;
+  background: none;
+  background-image: url(../../../images/buttonportfolio.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.portfolio__arrow:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width:1279px) {
+  .portfolio__arrow {
+    width: 29px;
+    height: 60px;
+    background-image: url(../../../images/buttonportfolio767.svg);
+  }
+}
+
+@media screen and (max-width:767px) {
+  .portfolio__arrow {
+    width: 18px;
+    height: 28px;
+    background-image: url(../../../images/buttonportfolio320.svg);
+  }
+}

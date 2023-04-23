@@ -1,0 +1,9 @@
+.checkbox {
+  display: inline-block;
+  height: 20px;
+
+}
+
+.checkbox :hover {
+  cursor: pointer;
+}

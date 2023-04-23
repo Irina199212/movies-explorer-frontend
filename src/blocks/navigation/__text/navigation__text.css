@@ -1,0 +1,16 @@
+.navigation__text {
+  text-decoration: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:767px) {
+  .navigation__text {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

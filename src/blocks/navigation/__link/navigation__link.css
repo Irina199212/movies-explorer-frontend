@@ -1,0 +1,23 @@
+.navigation__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  width: 96px;
+  height: 36px;
+
+}
+
+.navigation__link:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+  .navigation__link {
+    border-radius: 6px;
+    width: 82px;
+    height: 26px;
+  }
+}

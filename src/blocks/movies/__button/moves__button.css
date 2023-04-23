@@ -1,0 +1,30 @@
+.moves__button {
+  margin: 50px auto 0;
+  width: 320px;
+  height: 36px;
+  padding: 11px 60px;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 9px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+
+}
+
+.moves__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+  .moves__button {
+    width: 240px;
+    padding: 11px 60px 9px;
+  }
+}

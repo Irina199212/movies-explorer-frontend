@@ -1,0 +1,24 @@
+.student__photo {
+  width: 270px;
+  height: 327px;
+  display: flex;
+  align-items: center;
+
+}
+
+@media screen and (max-width:1279px) {
+  .student__photo {
+    width: 255px;
+    height: 307px;
+
+  }
+}
+
+@media screen and (max-width:767px) {
+  .student__photo {
+    order: calc(1);
+    width: 100%;
+    height: 352px;
+    margin-bottom: 40px;
+  }
+}
