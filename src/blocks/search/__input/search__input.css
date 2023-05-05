@@ -1,5 +1,6 @@
 .search__input {
-  width: 100%;
+  width: calc(100% - 16px);
+  margin-right: 16px;
   padding: 0;
   border: none;
   background-color: #F9F9F9;

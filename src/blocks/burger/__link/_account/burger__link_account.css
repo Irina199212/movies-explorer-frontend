@@ -1,0 +1,13 @@
+.burger__link_account {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+}
+
+
+@media screen and (max-width:767px) {
+  .burger__link_account {
+    bottom: 46px;
+  }
+}

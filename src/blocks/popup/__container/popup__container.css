@@ -1,0 +1,13 @@
+.popup__container {
+  width: 396px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+
+@media screen and (max-width:767px) {
+  .popup__container {
+    width: 260px;
+  }
+}

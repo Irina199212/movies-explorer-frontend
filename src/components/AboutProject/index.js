@@ -1,6 +1,6 @@
 function AboutProject() {
   return (
-    <section id="project" className='project'>
+    <section id='project' className='project'>
       <div className='container'>
         <h2 className='main__title'>О проекте</h2>
         <div className='project__diploma'>

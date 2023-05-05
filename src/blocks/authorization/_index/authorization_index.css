@@ -1,0 +1,8 @@
+.authorization_index {}
+
+
+@media screen and (max-width:992px) {
+  .authorization_index {
+    display: flex;
+  }
+}

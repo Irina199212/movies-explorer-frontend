@@ -8,7 +8,7 @@
 
 }
 
-@media screen and (max-width:1279px) {
+@media screen and (max-width:992px) {
   .cards {
     grid-template-columns: min-content min-content;
 

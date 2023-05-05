@@ -1,4 +1,4 @@
-import photo from '../../images/5714 (5).jpg';
+import photo from '../../images/photo.jpeg';
 import Portfolio from '../Portfolio';
 
 function AboutMe() {
@@ -13,14 +13,17 @@ function AboutMe() {
               Фронтенд-разработчик, 30&nbsp;лет
             </p>
             <p className='student__text'>
-              Я&nbsp;родился и&nbsp;живу в&nbsp;Рязань, закончил факультет
-              экономики СГУ. У&nbsp;меня есть жена и&nbsp;дочь. Я&nbsp;люблю
-              слушать музыку, а&nbsp;ещё увлекаюсь бегом. Недавно начал кодить.
-              С&nbsp;2015 года работал в&nbsp;компании &laquo;СКБ Контур&raquo;.
-              После того, как прошёл курс по&nbsp;веб-разработке, начал
-              заниматься фриланс-заказами и&nbsp;ушёл с&nbsp;постоянной работы.
+              Я&nbsp;родилась и&nbsp;живу в&nbsp;городе Рязань, закончила
+              медицинский колледж.Я люблю слушать музыку, увлекаюсь спортом.
+              Недавно начала программировать. При прохождении курса
+              по&nbsp;веб-разработке, начала заниматься фриланс-заказами.
             </p>
-            <a href='./' className='student__link'>
+            <a
+              href='https://github.com/Irina199212'
+              target='_blank'
+              rel='noreferrer'
+              className='student__link'
+            >
               Github
             </a>
           </div>

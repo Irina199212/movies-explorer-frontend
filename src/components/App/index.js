@@ -16,8 +16,7 @@ function App() {
   useEffect(() => {
     if (hash === '') {
       window.scrollTo(0, 0);
-    }
-    else {
+    } else {
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);

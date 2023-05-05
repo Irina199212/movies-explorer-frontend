@@ -1,3 +1,11 @@
 .container_header_auth {
   grid-template-columns: min-content 1fr min-content;
 }
+
+
+@media screen and (max-width:992px) {
+  .container {
+    grid-template-columns: min-content min-content;
+    justify-content: space-between;
+  }
+}

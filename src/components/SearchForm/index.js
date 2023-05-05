@@ -1,4 +1,5 @@
 import search from '../../images/inputicon.svg';
+import FilterCheckbox from '../FilterCheckbox';
 function SearchForm() {
   return (
     <section className='search'>
@@ -13,9 +14,7 @@ function SearchForm() {
                     <input
                       type='text'
                       name='film'
-                      id=''
                       placeholder='Фильм'
-                      value=''
                       className='search__input'
                     />
                   </div>
@@ -25,16 +24,7 @@ function SearchForm() {
                 </form>
               </div>
             </div>
-            <div className='search__checkbox'>
-              <label className='checkbox' for='checkbox'>
-                <input
-                  className='checkbox__input'
-                  type='checkbox'
-                  id='checkbox'
-                />
-                <span className='checkbox__text'>Короткометражки</span>
-              </label>
-            </div>
+            <FilterCheckbox />
           </div>
         </div>
       </div>

@@ -9,7 +9,12 @@ function Header() {
       ? 'container container_header'
       : 'container container_header container_header_auth';
 
-  if (location.pathname !== '/' && location.pathname !== '/movies' && location.pathname !== '/saved-movies' && location.pathname !== '/profile') {
+  if (
+    location.pathname !== '/' &&
+    location.pathname !== '/movies' &&
+    location.pathname !== '/saved-movies' &&
+    location.pathname !== '/profile'
+  ) {
     return <header className='header'></header>;
   } else {
     return (

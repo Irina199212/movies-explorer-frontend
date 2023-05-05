@@ -1,6 +1,12 @@
+import MoviesCardList from '../MoviesCardList';
+import SearchForm from '../SearchForm';
+
 function SavedMovies() {
   return (
-    'SavedMovies'
+    <>
+      <SearchForm />
+      <MoviesCardList saved={true}/>
+    </>
   );
 }
 

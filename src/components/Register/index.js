@@ -2,16 +2,26 @@ import logo from '../../images/logo.svg';
 
 function Register() {
   return (
-    <section className='register'>
-      <div className='form'>
-        <a href='./' className='logo'>
-          <img src={logo} alt='лого' />
-        </a>
-        <h2 className='form__title'>Добро пожаловать!</h2>
-        <form action method='get' className='form__registration'>
-          <div className='form__elements'>
+    <section className='popup'>
+      <div className='popup__container'>
+        <div className='popup__header'>
+          <div className='logo logo_popup'>
+            <a href='./'>
+              <img src={logo} alt='лого' />
+            </a>
+          </div>
+          <h2 className='popup__title'>Добро пожаловать!</h2>
+        </div>
+        <fieldset className='popup__body'>
+          <form
+            action=''
+            method='post'
+            name='registerForm'
+            className='form'
+            noValidate
+          >
             <div className='form__row'>
-              <label className='form__label' for='name'>
+              <label className='form__label' htmlFor='name'>
                 Имя
               </label>
               <input
@@ -19,36 +29,46 @@ function Register() {
                 className='form__input'
                 id='name'
                 name='student_name'
+                required
               />
-              <p className='error-text'>Что-то пошло не так...</p>
+              <span className='form__error'>
+                Имя обязательно для заполнения
+              </span>
             </div>
 
             <div className='form__row'>
-              <label className='form__label' for='e-mail'>
+              <label className='form__label' htmlFor='e-mail'>
                 E-mail
               </label>
               <input
-                type='e-mail'
+                type='email'
                 className='form__input'
                 id='e-mail'
                 name='student_e-mail'
+                required
               />
-              <p className='error-text'>Что-то пошло не так...</p>
+              <span className='form__error'>Что-то пошло не так...</span>
             </div>
 
             <div className='form__row'>
-              <label className='form__label' for='password'>
+              <label className='form__label' htmlFor='password'>
                 Пароль
               </label>
               <input
                 type='password'
-                className='form__input'
+                className='form__input form__input_error'
                 id='password'
                 name='student_password'
+                required
+                defaultValue='123123123'
               />
-              <p className='error-text'>Что-то пошло не так...</p>
+              <span className='form__error form__error_active'>
+                Что-то пошло не так...
+              </span>
             </div>
-          </div>
+          </form>
+        </fieldset>
+        <div className='popup__footer'>
           <button
             type='submit'
             name='registration-button'
@@ -56,13 +76,13 @@ function Register() {
           >
             Зарегистрироваться
           </button>
-          <div className='form__elements-text'>
-            <p className='form__text'>Уже зарегистрированы?</p>
-            <a href='./entrance.html' className='form__link'>
+          <p className='form__text'>
+            Уже зарегистрированы?{' '}
+            <a href='/signin' className='form__link'>
               Войти
             </a>
-          </div>
-        </form>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,17 @@
+.form__input_profile {
+  border-bottom: 0;
+  text-align: right;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+
+}
+
+.form__input_profile:focus {
+  border-bottom: 0;
+}
+
+
+@media screen and (max-width:767px) {}

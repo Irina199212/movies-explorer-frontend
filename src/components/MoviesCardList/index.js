@@ -1,23 +1,23 @@
 import MoviesCard from '../MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList(props) {
   return (
     <section className='movies'>
       <div className='container'>
         <div className='cards'>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
-          <MoviesCard/>
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
+          <MoviesCard {...props} />
         </div>
-        <button className='moves__button'>Ещё</button>
+        {!props.saved && <button className='moves__button'>Ещё</button>}
       </div>
     </section>
   );

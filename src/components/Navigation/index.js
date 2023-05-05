@@ -1,11 +1,12 @@
 import { Link, Route, Routes } from 'react-router-dom';
+import Burger from '../Burger';
 function Navigation() {
   return (
     <Routes>
       <Route
         path='/'
         element={
-          <nav className='authorization'>
+          <nav className='authorization authorization_index'>
             <Link to='/signup' className='link link_signup'>
               Регистрация
             </Link>
@@ -32,6 +33,7 @@ function Navigation() {
                 Аккаунт
               </Link>
             </nav>
+            <Burger />
           </>
         }
       />
@@ -55,6 +57,7 @@ function Navigation() {
                 Аккаунт
               </Link>
             </nav>
+            <Burger />
           </>
         }
       />
@@ -75,6 +78,7 @@ function Navigation() {
                 Аккаунт
               </Link>
             </nav>
+            <Burger />
           </>
         }
       />
