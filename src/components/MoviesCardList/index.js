@@ -4,7 +4,7 @@ function MoviesCardList(props) {
   return (
     <section className='movies'>
       <div className='container'>
-        <div className='cards'>
+        <ul className='cards'>
           <MoviesCard {...props} />
           <MoviesCard {...props} />
           <MoviesCard {...props} />
@@ -16,8 +16,8 @@ function MoviesCardList(props) {
           <MoviesCard {...props} />
           <MoviesCard {...props} />
           <MoviesCard {...props} />
-        </div>
-        {!props.saved && <button className='moves__button'>Ещё</button>}
+        </ul>
+        {!props.saved && <button className='movies__button'>Ещё</button>}
       </div>
     </section>
   );

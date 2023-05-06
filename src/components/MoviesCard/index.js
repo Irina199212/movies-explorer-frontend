@@ -2,7 +2,7 @@ import img from '../../images/1.png';
 
 function MoviesCard(props) {
   return (
-    <div className='card'>
+    <li className='card'>
       <div className='card__body'>
         <div className='card__info'>
           <h4 className='card__title'>33 слова о дизайне</h4>
@@ -16,7 +16,7 @@ function MoviesCard(props) {
         ></button>
       </div>
       <img src={img} className='card__images' alt='' />
-    </div>
+    </li>
   );
 }
 

@@ -1,4 +1,4 @@
-.moves__button {
+.movies__button {
   margin: 50px auto 0;
   width: 320px;
   height: 36px;
@@ -17,13 +17,13 @@
 
 }
 
-.moves__button:hover {
+.movies__button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
 @media screen and (max-width:767px) {
-  .moves__button {
+  .movies__button {
     width: 240px;
     padding: 11px 60px 9px;
   }

@@ -1,6 +1,6 @@
 function NotFound() {
   return (
-    <section className='popup'>
+    <section className='form popup'>
       <div className='popup__container'>
         <h1 className='popup__title popup__title_404'>404</h1>
         <div className='popup__subtitle'>Страница не найдена</div>

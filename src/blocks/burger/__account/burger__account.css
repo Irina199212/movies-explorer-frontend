@@ -1,4 +1,4 @@
-.burger__link_account {
+.burger__account{
   position: absolute;
   bottom: 90px;
   width: 100%;
@@ -7,7 +7,7 @@
 
 
 @media screen and (max-width:767px) {
-  .burger__link_account {
+  .burger__account {
     bottom: 46px;
   }
 }
