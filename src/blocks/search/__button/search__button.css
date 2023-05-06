@@ -1,0 +1,15 @@
+.search__button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: none;
+  background-image: url(../../../images/inputbutton.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.search__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

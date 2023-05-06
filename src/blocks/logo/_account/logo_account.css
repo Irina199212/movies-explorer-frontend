@@ -1,0 +1,9 @@
+.logo_account {
+  margin-right: 28px;
+}
+
+@media screen and (max-width:1279px) {
+  .logo_account {
+    margin-right: 0;
+  }
+}

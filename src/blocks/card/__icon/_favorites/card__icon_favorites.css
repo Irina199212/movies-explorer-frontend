@@ -1,0 +1,14 @@
+.card__icon_favorites {
+  background-image: url(../../../../images/iconfavorires.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  background-color: #F9F9F9;
+  width: 30px;
+  height: 30px;
+}
+
+.card__icon_favorites:active {
+  opacity: .3;
+  background-image: url(../../../../images/iconfavorires.svg);
+}

@@ -1,0 +1,19 @@
+.technologies {
+  background-color: #F5F5F5;
+  padding-bottom: 100px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width:1279px) {
+  .technologies {
+    padding-bottom: 90px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .technologies {
+    padding-bottom: 70px;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,16 @@
+.card__icon {
+  background: none;
+  background-image: url(../../../images/cardicon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 30px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  cursor: pointer;
+}
+
+.card__icon:active {
+  background-image: url(../../../images/cardiconactiv.svg);
+}

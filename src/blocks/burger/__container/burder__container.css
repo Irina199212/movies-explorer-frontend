@@ -1,0 +1,16 @@
+.burger__container {
+  background: #fff;
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  width: calc(100% - 248px);
+  z-index: 20;
+}
+
+
+@media screen and (max-width:767px) {
+  .burger__container {
+    width: 100%;
+  }
+}

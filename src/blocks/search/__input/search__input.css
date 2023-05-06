@@ -1,0 +1,18 @@
+.search__input {
+  width: calc(100% - 16px);
+  margin-right: 16px;
+  padding: 0;
+  border: none;
+  background-color: #F9F9F9;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A0A0A0;
+}
+
+.search__input:focus {
+  outline: 0;
+  color: #000;
+}

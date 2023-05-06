@@ -1,0 +1,6 @@
+.profile__links {
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+  gap: 16px;
+}

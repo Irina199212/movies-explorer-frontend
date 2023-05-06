@@ -1,0 +1,9 @@
+.popup__body_profile {
+  margin-bottom: 220px;
+}
+
+@media screen and (max-width:767px) {
+  .popup__body_profile {
+    margin-bottom: 0;
+  }
+}

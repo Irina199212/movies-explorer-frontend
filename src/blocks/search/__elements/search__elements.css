@@ -1,0 +1,18 @@
+.search__elements {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9F9F9;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+
+}
+
+@media screen and (max-width:767px) {
+  .search__elements {
+    border-radius: 9px;
+    margin-bottom: 45px;
+  }
+}

@@ -1,0 +1,11 @@
+.search__container-button {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+@media screen and (max-width:992px) {
+  .search__container-button {
+    margin-right: 19px;
+  }
+}

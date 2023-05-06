@@ -1,0 +1,5 @@
+.project__back-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
