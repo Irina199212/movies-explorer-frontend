@@ -1,13 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import Navigation from '../Navigation';
-function Header() {
+function Header({ loggedIn }) {
   const location = useLocation();
 
-  const headerClassName =
-    location.pathname === '/'
-      ? 'container container_header'
-      : 'container container_header container_header_auth';
+  const headerClassName = loggedIn
+    ? 'container container_header container_header_auth'
+    : 'container container_header';
 
   if (
     location.pathname !== '/' &&
@@ -23,7 +22,7 @@ function Header() {
           <Link to='/' className='logo'>
             <img src={logo} alt='Логотип' />
           </Link>
-          <Navigation />
+          <Navigation loggedIn={loggedIn} />
         </div>
       </header>
     );

@@ -118,6 +118,7 @@
 @import url(./blocks/popup/__body/popup__body.css);
 @import url(./blocks/popup/__body/_profile/popup__body_profile.css);
 @import url(./blocks/popup/__footer/popup__footer.css);
+@import url(./blocks/popup/__error/popup__error.css);
 @import url(./blocks/popup/__footer/_profile/popup__footer_profile.css);
 @import url(./blocks/popup/__title/popup__title.css);
 @import url(./blocks/popup/__title/_profile/popup__title_profile.css);

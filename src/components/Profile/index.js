@@ -1,4 +1,4 @@
-function Profile() {
+function Profile({signOut}) {
   return (
     <form
       className='form popup popup_profile'
@@ -45,7 +45,7 @@ function Profile() {
             <button type='submit' className='profile__link'>
               Редактировать
             </button>
-            <button type='button' className='profile__link profile__link_red'>
+            <button type='button' onClick={signOut} className='profile__link profile__link_red'>
               Выйти из аккаунта
             </button>
           </div>
