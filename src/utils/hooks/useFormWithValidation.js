@@ -1,9 +1,13 @@
 import React, { useCallback } from 'react';
 
-export function useFormWithValidation(validators) {
-  const [values, setValues] = React.useState({});
+export function useFormWithValidation(
+  validators,
+  initValues = {},
+  validForm = false
+) {
+  const [values, setValues] = React.useState(initValues);
   const [errors, setErrors] = React.useState({});
-  const [isValid, setIsValid] = React.useState(false);
+  const [isValid, setIsValid] = React.useState(validForm);
 
   const handleChange = (event) => {
     const target = event.target;
