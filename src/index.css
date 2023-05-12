@@ -37,6 +37,7 @@
 @import url(./blocks/footer/__year/footer__year.css);
 @import url(./blocks/photo/photo.css);
 @import url(./blocks/movies/movies.css);
+@import url(./blocks/movies/__error/movies__error.css);
 @import url(./blocks/movies/__button/moves__button.css);
 @import url(./blocks/movies/_favorites/movies_favorites.css);
 @import url(./blocks/banner/banner.css);

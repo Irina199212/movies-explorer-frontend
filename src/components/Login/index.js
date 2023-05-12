@@ -3,8 +3,7 @@ import validator from 'validator/es';
 import logo from '../../images/logo.svg';
 import { useFormWithValidation } from '../../utils/hooks/useFormWithValidation';
 
-function Login({isError, message, onSubmit }) {
-
+function Login({ isError, message, onSubmit }) {
   const { values, errors, handleChange, isValid } = useFormWithValidation({
     email: {
       validate: isEmail,

@@ -6,10 +6,24 @@ function Navigation({ loggedIn }) {
     return (
       <>
         <nav className='header__navigation'>
-          <Link to='/movies' className={pathname==='/movies' ?'header__link header__link_active' : 'header__link'}>
+          <Link
+            to='/movies'
+            className={
+              pathname === '/movies'
+                ? 'header__link header__link_active'
+                : 'header__link'
+            }
+          >
             Фильмы
           </Link>
-          <Link to='/saved-movies' className={pathname==='/saved-movies' ?'header__link header__link_active' : 'header__link'}>
+          <Link
+            to='/saved-movies'
+            className={
+              pathname === '/saved-movies'
+                ? 'header__link header__link_active'
+                : 'header__link'
+            }
+          >
             Сохранённые фильмы
           </Link>
         </nav>

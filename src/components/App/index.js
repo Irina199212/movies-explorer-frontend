@@ -57,10 +57,9 @@ function App() {
             setLoggedIn(true);
             setCurrentUser(tokenData.data);
 
-            if(pathname=== '/signin' || pathname=== '/signup'){
+            if (pathname === '/signin' || pathname === '/signup') {
               navigate('/', { replace: true });
             }
-
           }
         })
         .catch((err) => {
@@ -127,6 +126,23 @@ function App() {
     navigate('/', { replace: true });
   }
 
+  function handleUpdateUser(name, email) {
+    setLoading(true);
+    const jwt = localStorage.getItem('jwt');
+    mainApi
+      .updateUserInfo({ name: name, email: email }, jwt)
+      .then((info) => {
+        setCurrentUser(info.data);
+      })
+      .catch((err) => {
+        setIsError(true);
+        setMessage(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <Header email={email} loggedIn={loggedIn} />
@@ -139,7 +155,12 @@ function App() {
             <Route
               path='/movies'
               element={
-                <ProtectedRouteElement element={Movies} loggedIn={loggedIn} />
+                <ProtectedRouteElement
+                  element={Movies}
+                  user={currentUser}
+                  loggedIn={loggedIn}
+                  setLoading={setLoading}
+                />
               }
             />
             <Route
@@ -156,7 +177,11 @@ function App() {
               element={
                 <ProtectedRouteElement
                   element={Profile}
+                  isError={isError}
+                  message={message}
+                  user={currentUser}
                   loggedIn={loggedIn}
+                  onSubmit={handleUpdateUser}
                   signOut={signOut}
                 />
               }

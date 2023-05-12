@@ -143,7 +143,7 @@ function Register({ isError, message, onSubmit }) {
         </fieldset>
 
         <div className='popup__footer'>
-        {isError && <div className='popup__error'>{message}</div>}
+          {isError && <div className='popup__error'>{message}</div>}
           {isValid ? (
             <button
               type='submit'

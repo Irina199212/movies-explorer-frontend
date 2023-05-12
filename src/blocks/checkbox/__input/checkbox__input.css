@@ -7,7 +7,7 @@
 }
 
 .checkbox__input:checked+.checkbox__text:before {
-  background-color: #EBEBEB;
+  background-color: #2BE080;
 }
 
 .checkbox__input:checked+.checkbox__text::after {
