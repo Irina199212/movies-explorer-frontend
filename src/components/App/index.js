@@ -58,7 +58,7 @@ function App() {
             setCurrentUser(tokenData.data);
 
             if (pathname === '/signin' || pathname === '/signup') {
-              navigate('/', { replace: true });
+              navigate('/movies', { replace: true });
             }
           }
         })
@@ -123,6 +123,8 @@ function App() {
     setLoggedIn(false);
     setEmail(null);
     localStorage.removeItem('jwt');
+    localStorage.removeItem('filterString');
+    localStorage.removeItem('filterSmallMovies');
     navigate('/', { replace: true });
   }
 
@@ -133,6 +135,8 @@ function App() {
       .updateUserInfo({ name: name, email: email }, jwt)
       .then((info) => {
         setCurrentUser(info.data);
+        setIsError(true);
+        setMessage("Данные изменены");
       })
       .catch((err) => {
         setIsError(true);

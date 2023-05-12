@@ -5,10 +5,12 @@ export default class MainApi {
   }
 
   _getResponseData(res) {
-    if (!res.ok) {
-      return Promise.reject(`Ошибка: ${res.message}`);
+    if (res.ok) {
+      return res.json();
     }
-    return res.json();
+    return res.json().then((data) => {
+      return Promise.reject(data.message);
+    });
   }
 
   signup(email, name, password) {

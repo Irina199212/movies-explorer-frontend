@@ -14,7 +14,7 @@ function Profile({ isError, message, onSubmit, signOut, user }) {
       },
     },
     user,
-    true
+    false
   );
 
   function checkEmail(value) {
@@ -108,7 +108,7 @@ function Profile({ isError, message, onSubmit, signOut, user }) {
         <div className='profile popup__footer popup__footer_profile'>
           {isError && <div className='popup__error'>{message}</div>}
           <div className='profile__links'>
-            {isValid ? (
+            {(isValid && (user.name!==values['name'] || user.email!==values['email'])) ? (
               <button
                 type='submit'
                 name='registration-button'
