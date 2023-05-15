@@ -5,7 +5,7 @@ import MoviesCardList from '../MoviesCardList';
 import Preloader from '../Preloader/Preloader';
 import SearchForm from '../SearchForm';
 
-function Movies() {
+function Movies({loggedIn}) {
   const [isLoading, setLoading] = useState(false);
   const [allMovies, setAllMovies] = useState([]);
   const [renderMovies, setRenderMovies] = useState([]);
@@ -110,7 +110,7 @@ function Movies() {
     } else {
       setAllMovies(JSON.parse(movies));
     }
-  }, []);
+  }, [loggedIn]);
 
   function handleSave(movie) {
     setLoading(true);

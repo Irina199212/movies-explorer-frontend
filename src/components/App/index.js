@@ -125,6 +125,7 @@ function App() {
     localStorage.removeItem('jwt');
     localStorage.removeItem('filterString');
     localStorage.removeItem('filterSmallMovies');
+    localStorage.removeItem('movies');
     navigate('/', { replace: true });
   }
 
