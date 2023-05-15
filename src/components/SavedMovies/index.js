@@ -1,5 +1,16 @@
 import { useEffect, useState } from 'react';
 import { mainApi } from '../../utils/MainApi';
+import {
+  desktopCards,
+  desktopCardsAdded,
+  desktopWidth,
+  ipadCards,
+  ipadCardsAdded,
+  ipadWidth,
+  mobileCards,
+  mobileCardsAdded,
+  smallMovieDuration,
+} from '../../utils/config';
 import MoviesCardList from '../MoviesCardList';
 import Preloader from '../Preloader/Preloader';
 import SearchForm from '../SearchForm';
@@ -18,20 +29,20 @@ function SavedMovies() {
   function checkWidth() {
     const pageWidth = document.documentElement.clientWidth;
 
-    if (pageWidth > 1200) {
-      setInitMoviesCount(12);
-      setAddedMovies(3);
-    } else if (pageWidth > 768) {
-      setInitMoviesCount(8);
-      setAddedMovies(2);
+    if (pageWidth > desktopWidth) {
+      setInitMoviesCount(desktopCards);
+      setAddedMovies(desktopCardsAdded);
+    } else if (pageWidth > ipadWidth) {
+      setInitMoviesCount(ipadCards);
+      setAddedMovies(ipadCardsAdded);
     } else {
-      setInitMoviesCount(5);
-      setAddedMovies(1);
+      setInitMoviesCount(mobileCards);
+      setAddedMovies(mobileCardsAdded);
     }
   }
 
   useEffect(() => {
-      handleFilter('');
+    handleFilter('');
   }, [savedMovies]);
 
   useEffect(() => {
@@ -114,7 +125,7 @@ function SavedMovies() {
     const filterData = savedMovies.filter((movie) => {
       let matchedWord = false;
 
-      if (checked && movie.duration > 40) {
+      if (checked && movie.duration > smallMovieDuration) {
         return matchedWord;
       }
       matchedWord = (movie.nameRU + movie.nameEN)
