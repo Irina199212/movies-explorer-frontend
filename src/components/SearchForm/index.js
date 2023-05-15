@@ -1,29 +1,54 @@
-import validator from 'validator/es';
+import { useEffect, useState } from 'react';
 import search from '../../images/inputicon.svg';
-import FilterCheckbox from '../FilterCheckbox';
-
 import { useFormWithValidation } from '../../utils/hooks/useFormWithValidation';
-function SearchForm({ onSubmit, onSmallMovies }) {
-  const { values, errors, handleChange, isValid } = useFormWithValidation(
+import FilterCheckbox from '../FilterCheckbox';
+function SearchForm({ onSubmit, onSmallMovies, isSavedMovies = false }) {
+  const savedMovies = isSavedMovies ? '' : localStorage.getItem('filterString');
+  const [isValidForm, setIsValidForm] = useState(false);
+  const [isSmallMovies, setIsSmallMovies] = useState(false);
+  const { values, errors, handleChange } = useFormWithValidation(
     {
       filter: {
         validate: checkName,
-        message: 'Имя должно быть строкой от 2 до 30 символов',
+        message: 'Поиск должен быть не пустым',
       },
     },
     {
-      filter: localStorage.getItem('filterString'),
-    },
-    localStorage.getItem('filterString') ? true : false
+      filter: savedMovies,
+    }
   );
+  useEffect(() => {
+    let smallMoviesChecked = false;
+    if (!isSavedMovies)
+      smallMoviesChecked =
+        localStorage.getItem('filterSmallMovies') === 'Y' ? true : false;
+    setIsSmallMovies(smallMoviesChecked);
+  }, []);
 
-  function checkName(value) {
-    return validator.isLength(value, { min: 2 });
+  useEffect(() => {
+    checkName(savedMovies ? savedMovies : '');
+  }, []);
+
+  useEffect(() => {
+    checkName(values['filter'] ? values['filter'] : '');
+  }, [values['filter']]);
+
+  function checkName(value = '') {
+    let valid = false;
+    if (value!=='' && value.replace(/^\s\s*/, '').replace(/\s\s*$/, '').length > 0)
+      valid = true;
+    setIsValidForm(valid);
+    return valid;
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    onSubmit(values['filter']);
+    onSubmit(values['filter'], isSmallMovies);
+  }
+
+  function handleSmallMovies(checked) {
+    onSmallMovies(values['filter'], checked);
+    setIsSmallMovies(checked);
   }
 
   return (
@@ -45,7 +70,6 @@ function SearchForm({ onSubmit, onSmallMovies }) {
                     <input
                       type='text'
                       name='filter'
-                      minLength={2}
                       value={values['filter'] || ''}
                       placeholder='Фильм'
                       onChange={handleChange}
@@ -58,25 +82,28 @@ function SearchForm({ onSubmit, onSmallMovies }) {
                     />
                   </div>
                   <div className='search__container-button'>
-                    {isValid ? (
-                      <button
-                        type='submit'
-                        name='search-button'
-                        className='search__button'
-                      ></button>
-                    ) : (
+                    {!isValidForm || values['filter'] === '' ? (
                       <button
                         type='submit'
                         name='search-button'
                         className='search__button'
                         disabled
                       ></button>
+                    ) : (
+                      <button
+                        type='submit'
+                        name='search-button'
+                        className='search__button'
+                      ></button>
                     )}
                   </div>
                 </form>
               </div>
             </div>
-            <FilterCheckbox onClick={onSmallMovies} />
+            <FilterCheckbox
+              onClick={handleSmallMovies}
+              isSavedMovies={isSavedMovies}
+            />
           </div>
         </div>
       </div>

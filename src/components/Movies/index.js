@@ -165,8 +165,8 @@ function Movies() {
     setFilterMovies(filterData);
   }
 
-  function handleSmallMovies(checked) {
-    handleFilter(localStorage.getItem('filterString'), checked);
+  function handleSmallMovies(filterString, checked) {
+    handleFilter(filterString, checked);
   }
 
   return (

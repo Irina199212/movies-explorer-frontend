@@ -1,10 +1,12 @@
-function FilterCheckbox({ onClick }) {
+function FilterCheckbox({ onClick, isSavedMovies = false }) {
   function checked(event) {
     onClick(event.target.checked);
   }
 
   const isChecked =
-    localStorage.getItem('filterSmallMovies') === 'Y' ? true : false;
+    localStorage.getItem('filterSmallMovies') === 'Y' && !isSavedMovies
+      ? true
+      : false;
 
   return (
     <div className='search__checkbox'>

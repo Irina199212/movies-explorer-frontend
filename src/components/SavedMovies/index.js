@@ -6,6 +6,7 @@ import SearchForm from '../SearchForm';
 
 function SavedMovies() {
   const [isLoading, setLoading] = useState(false);
+
   const [renderMovies, setRenderMovies] = useState([]);
   const [filterMovies, setFilterMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
@@ -30,17 +31,7 @@ function SavedMovies() {
   }
 
   useEffect(() => {
-    if (
-      localStorage.getItem('filterString') ||
-      localStorage.getItem('filterSmallMovies')
-    ) {
-      handleFilter(
-        localStorage.getItem('filterString'),
-        localStorage.getItem('filterSmallMovies') === 'Y' ? true : false
-      );
-    } else {
       handleFilter('');
-    }
   }, [savedMovies]);
 
   useEffect(() => {
@@ -120,8 +111,6 @@ function SavedMovies() {
   }
 
   function handleFilter(filterString, checked = false) {
-    localStorage.setItem('filterString', filterString);
-    localStorage.setItem('filterSmallMovies', checked ? 'Y' : 'N');
     const filterData = savedMovies.filter((movie) => {
       let matchedWord = false;
 
@@ -136,8 +125,8 @@ function SavedMovies() {
     setFilterMovies(filterData);
   }
 
-  function handleSmallMovies(checked) {
-    handleFilter(localStorage.getItem('filterString'), checked);
+  function handleSmallMovies(filterString, checked) {
+    handleFilter(filterString, checked);
   }
 
   return (
@@ -149,6 +138,7 @@ function SavedMovies() {
           <SearchForm
             onSubmit={handleFilter}
             onSmallMovies={handleSmallMovies}
+            isSavedMovies={true}
           />
           <MoviesCardList
             movies={renderMovies}
