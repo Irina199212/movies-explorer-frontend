@@ -7,6 +7,7 @@ function MoviesCardList({
   onSave,
   showMoreButton,
   showMoreMovies,
+  isSavedMovies = false
 }) {
   return (
     <section className='movies'>
@@ -17,6 +18,7 @@ function MoviesCardList({
               movies.map((movie) => (
                 <MoviesCard
                   card={movie}
+                  isSavedMovies={isSavedMovies}
                   savedMovies={savedMovies}
                   key={movie.id || movie._id}
                   onRemove={onRemove}

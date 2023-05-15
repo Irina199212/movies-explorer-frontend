@@ -143,6 +143,7 @@ function SavedMovies() {
           <MoviesCardList
             movies={renderMovies}
             savedMovies={savedMovies}
+            isSavedMovies={true}
             onRemove={handleRemove}
             showMoreButton={showMoreButton}
             showMoreMovies={handleShowMoreMovies}

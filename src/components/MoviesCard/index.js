@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function MoviesCard({ card, savedMovies, onSave, onRemove }) {
+function MoviesCard({ card, savedMovies, onSave, onRemove, isSavedMovies }) {
   let m = card.duration % 60;
   let h = (card.duration - m) / 60;
   let duration = '';
@@ -35,6 +35,8 @@ function MoviesCard({ card, savedMovies, onSave, onRemove }) {
     }
   }
 
+  const classNames = isSaved ? 'card__icon card__icon_active' : 'card__icon';
+
   return (
     <li className='card'>
       <div className='card__body'>
@@ -42,11 +44,20 @@ function MoviesCard({ card, savedMovies, onSave, onRemove }) {
           <h4 className='card__title'>{card.nameEN}</h4>
           <p className='card__text'>{duration}</p>
         </div>
-        <button
-          onClick={handleClick}
-          className={isSaved ? 'card__icon card__icon_favorites' : 'card__icon'}
-          aria-label='Кнопка лайка'
-        ></button>
+        {isSavedMovies ? (
+          <button
+            onClick={handleClick}
+            className='card__icon card__icon_favorites'
+            aria-label='Кнопка лайка'
+          ></button>
+        ) : (
+          <button
+            onClick={handleClick}
+            className={classNames}
+            disabled={isSaved ? true : false}
+            aria-label='Кнопка лайка'
+          ></button>
+        )}
       </div>
       <Link to={card.trailerLink} target='_blank' rel='noreferrer'>
         <img src={image} className='card__images' alt={card.nameEN} />
