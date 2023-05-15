@@ -18,7 +18,8 @@
   opacity: .8;
 }
 
-.profile__link:disabled{
+.profile__link:disabled {
   cursor: default;
   opacity: .8;
+  color: #ccc;
 }
