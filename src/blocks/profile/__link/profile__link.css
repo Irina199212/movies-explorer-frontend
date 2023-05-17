@@ -17,3 +17,9 @@
 .profile__link:hover {
   opacity: .8;
 }
+
+.profile__link:disabled {
+  cursor: default;
+  opacity: .8;
+  color: #ccc;
+}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 function Burger() {
+  const { pathname } = useLocation();
   const [show, setShowMenu] = useState(false);
   const showMenu = () => {
     setShowMenu(!show);
@@ -22,29 +24,47 @@ function Burger() {
             <nav>
               <ul className='burger__nav'>
                 <li>
-                  <a href='/' className='burger__link'>
+                  <Link
+                    to='/'
+                    className={
+                      pathname === '/'
+                        ? 'burger__link burger__link_active'
+                        : 'burger__link'
+                    }
+                  >
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href='/movies'
-                    className='burger__link burger__link_active'
+                  <Link
+                    to='/movies'
+                    className={
+                      pathname === '/movies'
+                        ? 'burger__link burger__link_active'
+                        : 'burger__link'
+                    }
                   >
                     Фильмы
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='/saved-movies' className='burger__link'>
+                  <Link
+                    to='/saved-movies'
+                    className={
+                      pathname === '/saved-movies'
+                        ? 'burger__link burger__link_active'
+                        : 'burger__link'
+                    }
+                  >
                     Сохранённые фильмы
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
             <div className='burger__account'>
-              <a href='/profile' className='link link_account'>
+              <Link to='/profile' className='link link_account'>
                 Аккаунт
-              </a>
+              </Link>
             </div>
           </div>
         </div>
