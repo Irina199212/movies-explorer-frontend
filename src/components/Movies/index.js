@@ -160,9 +160,11 @@ function Movies({ loggedIn }) {
   }
 
   function handleFilter(filterString, checked = false) {
+    localStorage.removeItem('filterString');
     localStorage.setItem('filterString', filterString);
     localStorage.setItem('filterSmallMovies', checked ? 'Y' : 'N');
-    const filterData = allMovies.filter((movie) => {
+    let filterData = [];
+    filterData = allMovies.filter((movie) => {
       let matchedWord = false;
 
       if (checked && movie.duration > smallMovieDuration) {
