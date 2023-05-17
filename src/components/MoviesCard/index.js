@@ -54,7 +54,6 @@ function MoviesCard({ card, savedMovies, onSave, onRemove, isSavedMovies }) {
           <button
             onClick={handleClick}
             className={classNames}
-            disabled={isSaved ? true : false}
             aria-label='Кнопка лайка'
           ></button>
         )}
